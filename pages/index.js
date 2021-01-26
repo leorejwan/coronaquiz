@@ -32,8 +32,13 @@ export default function Home(){
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit="">
+            <form onSubmit={function() {
+              console.log("Submit no React");
+            }}>
               <input placeholder="Digite seu nome" />
+              <button type="submit">
+                Jogar [SeuNome]
+              </button>
             </form>
           </Widget.Content>
         </Widget>
