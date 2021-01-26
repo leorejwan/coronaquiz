@@ -32,7 +32,8 @@ export default function Home(){
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function() {
+            <form onSubmit={function(e) {
+              e.preventDefault();
               console.log("Submit no React");
             }}>
               <input placeholder="Digite seu nome" />
