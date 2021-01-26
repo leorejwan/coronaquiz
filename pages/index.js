@@ -22,7 +22,8 @@ export const QuizContainer = styled.div`
 
 export default function Home(){
   const router = useRouter()
-  let name = 'Paulo'
+  const [name, setName] = React.useState('')
+  console.log('retorno do useState', name, setName)
   
   return(
     <QuizBackground backgroundImage={db.bg}>
@@ -46,9 +47,10 @@ export default function Home(){
               <input 
               onChange={ function(e) {
                 console.log(e.target.value)
-                name = e.target.value
+                setName(e.target.value)
               }}
               placeholder="Digite seu nome" />
+
               <button type="submit" disabled={name.length === 0}>
                 Jogar {name}
               </button>
