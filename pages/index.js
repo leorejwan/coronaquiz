@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Head from 'next/head'
+
 import db from '../db.json';
 import Widget from '../src/components/Widget'
 import QuizLogo from '../src/components/QuizLogo'
@@ -20,6 +22,9 @@ export const QuizContainer = styled.div`
 export default function Home(){
   return(
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>CoronaQuiz</title>
+      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
