@@ -32,7 +32,9 @@ export default function Home(){
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <input placeholder="" />
+            <form onSubmit="">
+              <input placeholder="Digite seu nome" />
+            </form>
           </Widget.Content>
         </Widget>
 
