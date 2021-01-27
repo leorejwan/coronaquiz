@@ -12,10 +12,10 @@ outline: 0;
 margin-bottom: 25px;
 `
 
-export default function Input(){
+export default function Input({ onChange }){
     return (
         <div>
-            <InputBase />
+            <InputBase onChange={onChange} />
         </div>
     )
 }
