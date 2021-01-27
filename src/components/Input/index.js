@@ -12,7 +12,7 @@ outline: 0;
 margin-bottom: 25px;
 `
 
-export function Input(){
+export default function Input(){
     return (
         <div>
             <InputBase />

@@ -8,6 +8,7 @@ import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
+import Input from '../src/components/Input'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -44,7 +45,7 @@ export default function Home(){
 
               console.log("Submit no React")
             }}>
-              <input 
+              <Input 
               onChange={ function(e) {
                 console.log(e.target.value)
                 setName(e.target.value)
