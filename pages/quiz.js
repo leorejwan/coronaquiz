@@ -25,6 +25,7 @@ function LoadingWidget() {
     totalQuestions,
     onSubmit,
   }) {
+    const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
     const questionId = `question__${questionIndex}`;
     return (
       <Widget>
@@ -63,12 +64,14 @@ function LoadingWidget() {
               return (
                 <Widget.Topic
                   as="label"
+                  key={alternativeId}
                   htmlFor={alternativeId}
                 >
                   <input
                     // style={{ display: 'none' }}
                     id={alternativeId}
                     name={questionId}
+                    onChange={() => setSelectedAlternative(alternativeIndex)}
                     type="radio"
                   />
                   {alternative}
@@ -76,12 +79,17 @@ function LoadingWidget() {
               );
             })}
   
-            {/* <pre>
+            <pre>
               {JSON.stringify(question, null, 4)}
-            </pre> */}
+            </pre>
             <Button type="submit">
               Confirmar
             </Button>
+            <p>alternatva selecionada: {selectedAlternative}</p>
+
+            <p>Você Acertou!</p>
+            <p>Você Errou!</p>
+
           </form>
         </Widget.Content>
       </Widget>
