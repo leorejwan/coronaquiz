@@ -112,11 +112,12 @@ function LoadingWidget() {
     RESULT: 'RESULT',
   };
   export default function QuizPage() {
-    const [screenState, setScreenState] = React.useState(screenStates.LOADING);
+    const [screenState, setScreenState] = React.useState(screenStates.RESULT); //LOADING
     const totalQuestions = db.questions.length;
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const questionIndex = currentQuestion;
     const question = db.questions[questionIndex];
+    const [results, setResults] = React.useState([]);
   
     // [React chama de: Efeitos || Effects]
     // React.useEffect
@@ -125,7 +126,7 @@ function LoadingWidget() {
     React.useEffect(() => {
       // fetch() ...
       setTimeout(() => {
-        setScreenState(screenStates.QUIZ);
+        // setScreenState(screenStates.QUIZ);
       }, 1 * 1000);
     // nasce === didMount
     }, []);
