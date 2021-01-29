@@ -18,6 +18,25 @@ function LoadingWidget() {
       </Widget>
     );
   }
+
+  function ResultWidget() {
+    return(
+        <Widget>
+            <Widget.Header>
+                Tela de resultado
+            </Widget.Header>
+    
+            <Widget.Content>
+                <p>Você acrertou X perguntas</p>
+                <ul>
+                  <li>
+                    #01: Resultado:
+                  </li>
+                </ul>
+            </Widget.Content>
+      </Widget>
+    );
+  }
   
   function QuestionWidget({
     question,
@@ -155,7 +174,7 @@ function LoadingWidget() {
   
           {screenState === screenStates.LOADING && <LoadingWidget />}
   
-          {screenState === screenStates.RESULT && <div>Você acertou X questões, parabéns!</div>}
+          {screenState === screenStates.RESULT && <ResultWidget />}
         </QuizContainer>
       </QuizBackground>
     )
