@@ -44,7 +44,7 @@ function LoadingWidget() {
                 </p>
                 <ul>
                   {results.map((r, index) => 
-                    <li>
+                    <li key={`result___${r}`}>
                       #{index + 1} {' '}: Resultado: 
                       {r === true ? ' Acertou' : ' Errou'}
                     </li>
