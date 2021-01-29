@@ -60,6 +60,7 @@ function LoadingWidget() {
     questionIndex,
     totalQuestions,
     onSubmit,
+    addResult,
   }) {
     const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
     const [isQuestionSubmited, setIsQuestionSubmited] = React.useState()
@@ -98,6 +99,7 @@ function LoadingWidget() {
               setIsQuestionSubmited(true);
               
               setTimeout(() => {
+                addResult(isCorrect);
                 onSubmit();
                 setIsQuestionSubmited(false);
                 setSelectedAlternative(undefined)
@@ -148,12 +150,18 @@ function LoadingWidget() {
     RESULT: 'RESULT',
   };
   export default function QuizPage() {
-    const [screenState, setScreenState] = React.useState(screenStates.RESULT); //LOADING
+    const [screenState, setScreenState] = React.useState(screenStates.LOADING); //LOADING
     const totalQuestions = db.questions.length;
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const questionIndex = currentQuestion;
     const question = db.questions[questionIndex];
-    const [results, setResults] = React.useState([true, false, true]);
+    const [results, setResults] = React.useState([]);
+    
+    function addResult(r){
+      setResults(
+        [...results, r]
+      );
+    }
   
     // [React chama de: Efeitos || Effects]
     // React.useEffect
@@ -162,7 +170,7 @@ function LoadingWidget() {
     React.useEffect(() => {
       // fetch() ...
       setTimeout(() => {
-        // setScreenState(screenStates.QUIZ);
+        setScreenState(screenStates.QUIZ);
       }, 1 * 1000);
     // nasce === didMount
     }, []);
@@ -186,6 +194,7 @@ function LoadingWidget() {
               questionIndex={questionIndex}
               totalQuestions={totalQuestions}
               onSubmit={handleSubmitQuiz}
+              addResult={addResult}
             />
           )}
   
