@@ -27,8 +27,7 @@
       }
     ],
     "external": [
-      "teste",
-      "teste2"
+      "https://coronaquiz.leorejwan.vercel.app/"
     ],
     "theme": {
       "colors": {
