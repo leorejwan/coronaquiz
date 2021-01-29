@@ -28,16 +28,17 @@ function LoadingWidget() {
     
             <Widget.Content>
                 <p>
-                  Você acrertou 
+                  Você acertou 
                   {' '}
-                  { results.reduce((somatoria, resultadoAtual) => {
+                  {/* { results.reduce((somatoria, resultadoAtual) => {
                     const acertou = resultadoAtual === true;
                     if(acertou){
                       return somatoria + 1;
                     }
 
                     return somatoria;
-                  }, 0)} 
+                  }, 0)}  */}
+                  {results.filter((x) => x).length}
                   {' '}
                   perguntas
                 </p>
