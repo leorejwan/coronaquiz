@@ -27,6 +27,7 @@ function LoadingWidget() {
   }) {
     const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
     const questionId = `question__${questionIndex}`;
+    const isCorrect = selectedAlternative === question.answer;
     return (
       <Widget>
         <Widget.Header>
@@ -79,16 +80,17 @@ function LoadingWidget() {
               );
             })}
   
-            <pre>
+            {/* <pre>
               {JSON.stringify(question, null, 4)}
-            </pre>
+            </pre> */}
             <Button type="submit">
               Confirmar
             </Button>
-            <p>alternatva selecionada: {selectedAlternative}</p>
+            
+            {/* <p>alternatva selecionada: {selectedAlternative}</p> */}
 
-            <p>Você Acertou!</p>
-            <p>Você Errou!</p>
+            {isCorrect  && <p>Você Acertou!</p>}
+            {!isCorrect && <p>Você Errou!</p>}
 
           </form>
         </Widget.Content>
