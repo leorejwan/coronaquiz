@@ -26,6 +26,7 @@ function LoadingWidget() {
     onSubmit,
   }) {
     const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+    const [isQuestionSubmited, setIsQuestionSubmited] = React.useState()
     const questionId = `question__${questionIndex}`;
     const isCorrect = selectedAlternative === question.answer;
     return (
@@ -57,6 +58,7 @@ function LoadingWidget() {
           <form
             onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
+              setIsQuestionSubmited(true);
               onSubmit();
             }}
           >
@@ -89,8 +91,8 @@ function LoadingWidget() {
             
             {/* <p>alternatva selecionada: {selectedAlternative}</p> */}
 
-            {isCorrect  && <p>Você Acertou!</p>}
-            {!isCorrect && <p>Você Errou!</p>}
+            {isQuestionSubmited && isCorrect  && <p>Você Acertou!</p>}
+            {isQuestionSubmited && !isCorrect && <p>Você Errou!</p>}
 
           </form>
         </Widget.Content>
