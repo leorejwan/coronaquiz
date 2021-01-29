@@ -29,6 +29,7 @@ function LoadingWidget() {
             <Widget.Content>
                 <p>
                   Você acrertou 
+                  {' '}
                   { results.reduce((somatoria, resultadoAtual) => {
                     const acertou = resultadoAtual === true;
                     if(acertou){
@@ -37,12 +38,13 @@ function LoadingWidget() {
 
                     return somatoria;
                   }, 0)} 
+                  {' '}
                   perguntas
                 </p>
                 <ul>
-                  {results.map((r) => 
+                  {results.map((r, index) => 
                     <li>
-                      #01: Resultado: 
+                      #{index + 1} {' '}: Resultado: 
                       {r === true ? ' Acertou' : ' Errou'}
                     </li>
                   )}
