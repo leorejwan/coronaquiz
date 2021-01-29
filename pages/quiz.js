@@ -59,7 +59,11 @@ function LoadingWidget() {
             onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               setIsQuestionSubmited(true);
-              onSubmit();
+              
+              setTimeout(() => {
+                onSubmit();
+                setIsQuestionSubmited(false);
+              }, 3 * 1000);
             }}
           >
             {question.alternatives.map((alternative, alternativeIndex) => {
