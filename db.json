@@ -27,7 +27,8 @@
       }
     ],
     "external": [
-      ""
+      "teste",
+      "teste2"
     ],
     "theme": {
       "colors": {

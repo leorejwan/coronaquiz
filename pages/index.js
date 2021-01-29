@@ -53,8 +53,19 @@ export default function Home(){
         <Widget>
           <Widget.Content>
             <h1>Quizes da Galera</h1>
+            <ul>
+            {db.external.map((linkExterno) => {
+             
+             return (
+               <li>
+                 <Widget.Topic href={"https://www.google.com/"}>
+                 {linkExterno}
+                 </Widget.Topic>
+                </li>
+             )
+            })}
+            </ul>
 
-            <p>lorem ipsum dolor sit amet...</p>
           </Widget.Content>
         </Widget>
         <Footer />
