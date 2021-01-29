@@ -19,7 +19,7 @@ function LoadingWidget() {
     );
   }
 
-  function ResultWidget() {
+  function ResultWidget({results}) {
     return(
         <Widget>
             <Widget.Header>
@@ -29,9 +29,12 @@ function LoadingWidget() {
             <Widget.Content>
                 <p>Você acrertou X perguntas</p>
                 <ul>
-                  <li>
-                    #01: Resultado:
-                  </li>
+                  {results.map((r) => 
+                    <li>
+                      #01: Resultado: 
+                      {r === true ? ' Acertou' : ' Errou'}
+                    </li>
+                  )}
                 </ul>
             </Widget.Content>
       </Widget>
@@ -136,7 +139,7 @@ function LoadingWidget() {
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const questionIndex = currentQuestion;
     const question = db.questions[questionIndex];
-    const [results, setResults] = React.useState([]);
+    const [results, setResults] = React.useState([true, false, true]);
   
     // [React chama de: Efeitos || Effects]
     // React.useEffect
@@ -174,7 +177,7 @@ function LoadingWidget() {
   
           {screenState === screenStates.LOADING && <LoadingWidget />}
   
-          {screenState === screenStates.RESULT && <ResultWidget />}
+          {screenState === screenStates.RESULT && <ResultWidget results={results} />}
         </QuizContainer>
       </QuizBackground>
     )
