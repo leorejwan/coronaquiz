@@ -27,7 +27,18 @@ function LoadingWidget() {
             </Widget.Header>
     
             <Widget.Content>
-                <p>Você acrertou X perguntas</p>
+                <p>
+                  Você acrertou 
+                  { results.reduce((somatoria, resultadoAtual) => {
+                    const acertou = resultadoAtual === true;
+                    if(acertou){
+                      return somatoria + 1;
+                    }
+
+                    return somatoria;
+                  }, 0)} 
+                  perguntas
+                </p>
                 <ul>
                   {results.map((r) => 
                     <li>
