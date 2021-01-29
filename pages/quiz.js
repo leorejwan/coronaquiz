@@ -64,6 +64,7 @@ function LoadingWidget() {
               setTimeout(() => {
                 onSubmit();
                 setIsQuestionSubmited(false);
+                setSelectedAlternative(undefined)
               }, 3 * 1000);
             }}
           >
