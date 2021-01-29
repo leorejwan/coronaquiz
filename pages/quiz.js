@@ -29,6 +29,7 @@ function LoadingWidget() {
     const [isQuestionSubmited, setIsQuestionSubmited] = React.useState()
     const questionId = `question__${questionIndex}`;
     const isCorrect = selectedAlternative === question.answer;
+    const hasAlternativeSelected = selectedAlternative !== undefined;
     return (
       <Widget>
         <Widget.Header>
@@ -89,7 +90,7 @@ function LoadingWidget() {
             {/* <pre>
               {JSON.stringify(question, null, 4)}
             </pre> */}
-            <Button type="submit">
+            <Button type="submit" disabled={!hasAlternativeSelected}>
               Confirmar
             </Button>
             
