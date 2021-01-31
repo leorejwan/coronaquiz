@@ -31,30 +31,23 @@ function LoadingWidget() {
     return(
         <Widget>
             <Widget.Header>
-                Tela de resultado
+                Resultado
             </Widget.Header>
     
             <Widget.Content>
                 <p>
-                  Você acertou 
-                  {' '}
-                  {/* { results.reduce((somatoria, resultadoAtual) => {
-                    const acertou = resultadoAtual === true;
-                    if(acertou){
-                      return somatoria + 1;
-                    }
-
-                    return somatoria;
-                  }, 0)}  */}
-                  {results.filter((x) => x).length}
-                  {' '}
-                  perguntas
+                  {results.filter((x) => !x).length} {' '} de {' '} {results.length} respostas indicam que você está com coronavirus!
                 </p>
+
+                {results.filter((x) => !x).length == results.length && <p>Se cuide, fique em casa... Se possível faça o exame de coronavirus para confirmar a situação (mas lembre-se que este questionário é muito mais eficaz) </p>}
+                {results.filter((x) => !x).length == 0 && <p>Você está ótimo! Que bom. Mas continue se cuidando, use máscara e evite aglomerações!</p>}
+                {results.filter((x) => !x).length < results.length && results.filter((x) => x).length > 0 && <p>Infelizmente não da para saber se você realmente está com coronavirus. Mas continue se cuidando, use máscara e evite aglomerações!</p>}
+                
                 <ul>
                   {results.map((r, index) => 
                     <li key={`result___${r}`}>
                       #{index + 1} {' '}: Resultado: 
-                      {r === true ? ' Acertou' : ' Errou'}
+                      {r === true ? ' OK' : ' Não OK'}
                     </li>
                   )}
                 </ul>
