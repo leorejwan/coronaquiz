@@ -147,8 +147,12 @@ function LoadingWidget() {
             
             {/* <p>alternatva selecionada: {selectedAlternative}</p> */}
 
-            {isQuestionSubmited && isCorrect  && <p>Você Acertou!</p>}
-            {isQuestionSubmited && !isCorrect && <p>Você Errou!</p>}
+            {isQuestionSubmited && isCorrect && selectedAlternative == 0 && <p>Ufa!</p>}
+            {isQuestionSubmited && isCorrect && selectedAlternative == 1 && <p>Ainda bem</p>}
+            {isQuestionSubmited && isCorrect && selectedAlternative >= 2 && <p>Que bom!</p>}
+            {isQuestionSubmited && !isCorrect && selectedAlternative == 0 && <p>Xii...</p>}
+            {isQuestionSubmited && !isCorrect && selectedAlternative == 1 && <p>ai ai ai...</p>}
+            {isQuestionSubmited && !isCorrect && selectedAlternative >= 2 && <p>Eita!</p>}
 
           </AlternativesForm>
         </Widget.Content>
