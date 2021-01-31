@@ -1,28 +1,51 @@
 {
     "bg": "https://exame.com/wp-content/uploads/2020/07/coronavirus-1.jpg",
-    "title": "Quiz Corona",
-    "description": "Teste seus conhecimentos do novo coronavirus sem sair de casa",
+    "title": "Teste do Corona",
+    "description": "Teste se você está com o coronavirus com este questionário!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://cdn.awsli.com.br/600x450/811/811777/produto/51200848/8574e81d89.jpg",
+        "title": "O que você achou da comida que comeu hoje?",
+        "description": "Vamos testar seu paladar",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Uma delícia",
+          "Meio sem gosto",
+          "Não senti gosto nenhum",
+          "Não senti fome hoje"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://4.bp.blogspot.com/-H-c73Zg2I9Q/W_70T9GEw7I/AAAAAAABBQM/UjsTBls1t0gsnWTjy8L0m4IY19SGaCXoQCLcBGAs/s1600/Maple-Fever-Blog-1030x601.png",
+        "title": "Você está com febre?",
+        "description": "Pode ser um dos sintomas...",
+        "answer": 1,
+        "alternatives": [
+           "Sim",
+           "Não"
+        ]
+      },
+      {
+        "image": "https://cdn.shopify.com/s/files/1/2175/9789/articles/coqueluche-720x480_2048x.jpg?v=1552414371",
+        "title": "Você teve contato com alguém que estava infectado com coronavirus nos últimos 15 dias?",
+        "description": "Será que seu amigo está se cuidando?",
+        "answer": 2,
+        "alternatives": [
+          "Sim",
+          "Não sei",
+          "Certeza que não"
+        ]
+      },
+      {
+        "image": "https://lh3.googleusercontent.com/proxy/T7hNwcORaYEKdGxcRvFYHcDocuhxbLiXSVm8Ht1yETUNhFUZTznvpyAjQZ_CWgCeU3_kM0zG9lTUVZIxmhqaw52fHP8BsfaP3xqbav8JjF9qcrUl2G54",
+        "title": "Você já tomou vacina?",
+        "description": "Virou jacaré?",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Sim! As duas doses",
+          "Apenas a primeira dose",
+          "Ainda não tomei vacina",
+          "Nunca vou tomar essa vacina!"
         ]
       }
     ],
