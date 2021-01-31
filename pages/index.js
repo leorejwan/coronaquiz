@@ -55,7 +55,7 @@ export default function Home(){
               placeholder="Digite seu nome" />
 
               <Button type="submit" disabled={name.length === 0}>
-                Jogar {name}
+                Testar {name}
               </Button>
             </form>
           </Widget.Content>
