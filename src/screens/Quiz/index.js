@@ -13,7 +13,7 @@ function LoadingWidget() {
     return(
         <Widget>
             <Widget.Header>
-                Carregando...
+                Carregando....
             </Widget.Header>
     
             <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
