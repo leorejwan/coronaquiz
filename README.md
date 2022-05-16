@@ -1,8 +1,15 @@
-# Teste se você está com coronavirus com este questionário!
+# Test if you are infected with Coronavirus on this quiz! Just for fun, ok ;)
 
-## Desenvolvido durante a imersão React v2 da Alura
+## Technologies used on this project:
+* ReactJS
+* NextJS
 
-## React JS , Next JS
+## To start using this project 
+* Type git clone https://github.com/leorejwan/coronaquiz.git on your git console
+* Type yarn on terminal in the project's folder
+* Type yarn dev to run
+
+## Developed in "Imersao Dev Alura" 
 
 
 ![Screenshot 1](https://user-images.githubusercontent.com/18248913/111195660-3e810500-859b-11eb-8203-2b9c1b0a3bcb.png)
